@@ -58,11 +58,11 @@ public class Grid
 {
     public Grid (int N)
     {
-        m_N = N;
-        m_cells = new boolean[N * N];
+        m_amount = N; // size of a grid side
+        m_cells = new boolean[m_amount * m_amount];
         Arrays.fill (m_cells, false);
         m_opened_count = 0;
-        m_uf = new UnionFind (N * N + 2);
+        m_uf = new UnionFind (m_amount * m_amount + 2);
     }
 
     public void OpenCell (int i, int j)
